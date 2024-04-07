@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Pencarian Toko</title>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/nelsenpro/toko/css.css media=all>
+<script src=https://cdn.jsdelivr.net/npm/sweetalert2@10></script>
+</head>
+<body class=fade-in>
+<header class=slide-up>
+<h1>Pencarian Toko</h1>
+<nav>
+<ul>
+<li><a href=# onclick=showAbout() class="fade-in infinite">About</a></li>
+<li><a href=# onclick=showContact() class=Kontak>Kontak</a></li>
+</ul>
+</nav>
+</header>
+<div class=row>
+<div id=widget-container class=slide-down>
+<input id=search-input placeholder="Cari toko..." autocomplete=off>
+</div>
+<div id=result-container class=result-container></div>
+<div class="button slide-left">
+<button class=button type=button id=prev-button>Previous</button>
+<button class=button type=button id=next-button>Next</button>
+<button class=button type=button id=add-button onclick=showAdd()>Add</button>
+</div>
+</div>
+<footer class="footer slide-left2">
+<p>
+&copy; <span id=currentDate class="fade-in infinite"></span>
+<span id=currentMonth class="fade-out infinite"></span>
+<span id=currentYear class="fade-in infinite"></span> <span id=PencarianToko class="fade-out infinite">Pencarian Toko</span>
+</p>
+</footer>
+<script src=https://cdn.jsdelivr.net/gh/nelsenpro/toko/js.js charset=utf-8></script>
+<script>function showAbout(){Swal.fire({title:"About",text:"Pencarian Toko",icon:"info",showCancelButton:!1,showConfirmButton:!0,confirmButtonText:"OK"})}function showContact(){Swal.fire({title:"Contact",html:'<a href="tel:085328736706" style="text-decoration: none;">085328736706</a>',icon:"question",showCancelButton:!1,showConfirmButton:!0,confirmButtonText:"OK"})}function showAdd(){Swal.fire({title:"Tambah Data Toko",html:'Untuk menambah data toko, hubungi <a href="tel:085328736706" style="text-decoration: none;">085328736706</a>',icon:"warning",showCancelButton:!1,showConfirmButton:!0,confirmButtonText:"OK"})}</script>
+<script>const months=["January","February","March","April","May","June","July","August","September","October","November","December"],currentDate=(new Date).getDate(),currentMonth=(new Date).getMonth(),currentYear=(new Date).getFullYear();document.getElementById("currentDate").textContent=currentDate,document.getElementById("currentMonth").textContent=months[currentMonth],document.getElementById("currentYear").textContent=currentYear</script>
+<style media=all>.slide-left2{animation:slideLeft 6s ease-in-out}.Kontak{color:#ff0}#next-button{background-color:tomato}#add-button{background-color:var(--orange)}</style>
+</body>
+</html>
