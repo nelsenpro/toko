@@ -1,4 +1,4 @@
-{
+[{
     "name": "Toko A",
     "category": "Pakaian",
     "location": "Jakarta",
@@ -283,4 +283,4 @@
     "website": "https://www.toko-z.com",
     "rating": 4.4,
     "photos": ["https://www.toko-z.com/photos/photo1.jpg", "https://www.toko-z.com/photos/photo2.jpg"]
-}
+}]
